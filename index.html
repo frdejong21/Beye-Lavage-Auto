@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Untitled</title>
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beye Lavage Auto</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f0f0f0; }
+    header { background: #1e90ff; color: white; text-align: center; padding: 40px 20px; }
+    header h1 { margin: 0; font-size: 2.5rem; }
+    header p { font-size: 1.2rem; margin-top: 10px; }
+    .container { max-width: 900px; margin: auto; padding: 30px 20px; background: white; margin-top: 20px; border-radius: 10px; }
+    .price { background: #e6f7ff; padding: 20px; border-radius: 10px; text-align: center; margin-bottom: 30px; }
+    .price h2 { margin: 0; font-size: 2rem; color: #007acc; }
+    .price p { font-size: 1.1rem; margin-top: 10px; }
+    .location { background: #fff4e6; padding: 20px; border-radius: 10px; text-align: center; margin-bottom: 30px; }
+    .location h3 { margin: 0; font-size: 1.5rem; color: #cc7000; }
+    .cta-buttons { text-align: center; margin-top: 30px; }
+    .cta-buttons a, .cta-buttons button {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 20px;
+      font-size: 1rem;
+      color: white;
+      background-color: #1e90ff;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    form { max-width: 500px; margin: 30px auto; text-align: left; }
+    label { display: block; margin: 10px 0 5px; }
+    input, textarea { width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px; }
+    footer { background: #1e90ff; color: white; text-align: center; padding: 20px; margin-top: 40px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Beye Lavage Auto</h1>
+    <p>Lavage de voiture par abonnement mensuel - Disponible à Cité Aliou Sow</p>
+  </header>
+
+  <div class="container">
+    <div class="price">
+      <h2>Abonnement : 25 000 FCFA / mois</h2>
+      <p>Un lavage de qualité, régulier, sans souci. On s’occupe de tout pour vous.</p>
+    </div>
+
+    <div class="location">
+      <h3>📍 Disponible à Cité Aliou Sow</h3>
+      <p>Nous intervenons rapidement dans votre quartier.</p>
+    </div>
+
+    <div class="cta-buttons">
+      <a href="https://wa.me/qr/2VUSECGTQCSTG1" target="_blank">S'abonner via WhatsApp</a>
+      <button onclick="document.getElementById('form-section').scrollIntoView({behavior: 'smooth'});">Remplir le formulaire</button>
+    </div>
+
+    <div id="form-section">
+      <form onsubmit="sendForm(); return false;">
+        <h2>Formulaire de souscription</h2>
+        <label for="name">Nom :</label>
+        <input type="text" id="name" required>
+
+        <label for="phone">Téléphone :</label>
+        <input type="tel" id="phone" required>
+
+        <label for="car">Type de voiture :</label>
+        <input type="text" id="car" required>
+
+        <label for="message">Message :</label>
+        <textarea id="message"></textarea>
+
+        <button type="https://wa.me/qr/2VUSECGTQCSTG1">Envoyer via WhatsApp</button>
+        <h1>Contact : +221 76 532 47 18</h1>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Beye Lavage Auto - Tous droits réservés
+  </footer>
+
+  <script>
+    function sendForm() {
+      const name = document.getElementById("name").value;
+      const phone = document.getElementById("phone").value;
+      const car = document.getElementById("car").value;
+      const msg = document.getElementById("message").value;
+
+      const text = encodeURIComponent(`Demande d'abonnement lavage auto:\nNom: ${name}\nTéléphone: ${phone}\nVoiture: ${car}\nMessage: ${msg}`);
+      window.open(`https://wa.me/221765324718?text=${text}`, '_blank');
+    }
+  </script>
+</body>
+</html>
+<!-- partial -->
+  
+</body>
+</html>
